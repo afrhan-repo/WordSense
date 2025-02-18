@@ -1,3 +1,4 @@
+
 import os
 import time
 import hashlib
@@ -41,7 +42,7 @@ def monitor_keystrokes():
     # Calculate the initial hash and initialize the last incomplete line.
     while True:
         current_hash = calculate_file_hash(keystroke_log)
-        time.sleep(0.2)
+        time.sleep(0.3)
         new_hash = calculate_file_hash(keystroke_log)
         if new_hash != current_hash:
             current_hash = new_hash
